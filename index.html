@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <script src="{% static 'js/main.js' %}"></script>
+    <link rel="icon" type="image/png" href="{% static 'images/icon.png' %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- GOOGLE FONTS -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Montserrat:wght@700&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title>Shubham's Portfolio</title>
+</head>
+<body>
+    <!-- Success Messages -->
+    {% if messages %}
+        {% for message in messages %}
+            <div class="alert alert-success">
+                {{ message }}
+            </div>
+        {% endfor %}
+    {% endif %}
+
+    <!-- Header Design -->
+    <header class="header">
+        <a href="#" class="logo">Shubham</a>
+        <i class="fa-solid fa-bars" id="menu-icon"></i>
+        <nav class="navbar">
+            <a href="#home" class="active">Home</a>
+            <a href="#about">About</a>
+            <a href="#project">Projects</a>
+            <a href="#skills">Skills</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Rest of your HTML code remains the same -->
+    <!-- Home Section Design -->
+    <section class="home" id="home">
+        <div class="home-content">
+            <h3>Hello, I'm</h3>
+            <h1>Shubham Gawande</h1>
+            <h3>And I'm a <span class="multiple-text">Python Full Stack Developer</span></h3>
+            <p>I'm a passionate developer with expertise in building scalable and user-friendly web applications. Currently pursuing my BCA final year and enhancing my skills in Python Full Stack Development at Giri's Tech Hub, Pune.</p>
+            <div class="btn-group">
+                <a href="{% static 'images/Shubham_CV.pdf' %}" class="btn">Download Resume</a>
+                <a href="#contact" class="btn secondary-btn">Hire Me</a>
+            </div>
+        </div>
+        <div class="my-img">
+            <img src="{% static 'images/shubham.png' %}" alt="Shubham's Photo">
+        </div>
+    </section>
+
+    <!-- About Section Design -->
+    <section class="about" id="about">
+        <div class="about-img">
+            <img src="{% static 'images/about.png' %}" alt="About Me">
+        </div>
+      <div class="about-content">
+    <h2 class="heading">ABOUT <span>ME</span></h2>
+
+    <h3>* Introduction</h3>
+    <p>I am Shubham Gawande, a final-semester BCA student at G. H. Raisoni Institute of Business Management, Jalgaon. I have a strong passion for web development and programming, specializing in Python Full Stack Development with hands-on experience in building dynamic web applications.</p>
+
+    <h3>* Professional Journey</h3>
+    <p>I completed an internship at Giri's Tech Hub, Pune, where I worked on real-world projects, enhancing my skills in Python, Django, and front-end technologies. I am always eager to learn and grow in the field of software development.</p>
+
+    <h3>* Education</h3>
+    <p>2022 - Present</p>
+    <p>Pursuing BCA from North Maharashtra University at G. H. Raisoni Institute of Business Management, Jalgaon.</p>
+    <p>Completed 12th from DES High School, Dharangaon with 79.33%.</p>
+
+    <h3>* Career Aspirations</h3>
+    <p>I aim to become a proficient Full Stack Developer and contribute to innovative projects that solve real-world problems. I am excited to work in a collaborative environment where I can apply my skills and learn from experienced professionals.</p>
+</div>
+
+    </section>
+
+    <!-- Project Section Design -->
+    <section class="project" id="project">
+        <h2 class="heading">My <span>Projects</span></h2>
+        <div class="project-container">
+            <div class="project-box">
+                <img src="{% static 'images/project1.jpg' %}" alt="E-Commerce Website">
+                <div class="project-layer">
+                    <h4>E-Commerce Website</h4>
+                    <p>A fully functional e-commerce platform built using Django and React.</p>
+                    <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="project-box">
+                <img src="{% static 'images/project2.jpg' %}" alt="Blog Application">
+                <div class="project-layer">
+                    <h4>Blog Application</h4>
+                    <p>A dynamic blog application with user authentication and CRUD functionality.</p>
+                    <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="project-box">
+                <img src="{% static 'images/project3.jpg' %}" alt="Task Manager">
+                <div class="project-layer">
+                    <h4>Task Manager</h4>
+                    <p>A task management tool built with Python Flask and SQLite.</p>
+                    <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section Design -->
+    <section class="skills" id="skills">
+        <h2 class="heading">My <span>Skills</span></h2>
+        <div class="skill-container">
+            <div class="skill-box">
+                <div class="skill-title">
+                    <div class="img">
+                        <img src="{% static 'images/python.png' %}" class="skill-icon" alt="Python">
+                    </div>
+                    <h3>Python</h3>
+                </div>
+            </div>
+            <div class="skill-box">
+                <div class="skill-title">
+                    <div class="img">
+                        <img src="{% static 'images/django.png' %}" class="skill-icon" alt="Django">
+                    </div>
+                    <h3>Django</h3>
+                </div>
+            </div>
+            <div class="skill-box">
+                <div class="skill-title">
+                    <div class="img">
+                        <img src="{% static 'images/flask.png' %}" class="skill-icon" alt="Flask">
+                    </div>
+                    <h3>Flask</h3>
+                </div>
+            </div>
+            <div class="skill-box">
+                <div class="skill-title">
+                    <div class="img">
+                        <img src="{% static 'images/html.png' %}" class="skill-icon" alt="HTML5">
+                    </div>
+                    <h3>HTML5</h3>
+                </div>
+            </div>
+            <div class="skill-box">
+                <div class="skill-title">
+                    <div class="img">
+                        <img src="{% static 'images/css-3.png' %}" class="skill-icon" alt="CSS3">
+                    </div>
+                    <h3>CSS3</h3>
+                </div>
+            </div>
+            <div class="skill-box">
+                <div class="skill-title">
+                    <div class="img">
+                        <img src="{% static 'images/js.png' %}" class="skill-icon" alt="JavaScript">
+                    </div>
+                    <h3>JavaScript</h3>
+                </div>
+
+            </div>
+            <div class="skill-box">
+                <div class="skill-title">
+                    <div class="img">
+                        <img src="{% static 'images/sql.png' %}" class="skill-icon" alt="SQL">
+                    </div>
+                    <h3>SQL</h3>
+                </div>
+            </div>
+            <div class="skill-box">
+                <div class="skill-title">
+                    <div class="img">
+                        <img src="{% static 'images/github.png' %}" class="skill-icon" alt="GitHub">
+                    </div>
+                    <h3>GitHub</h3>
+                </div>
+            </div>
+            <div class="skill-box">
+                <div class="skill-title">
+                    <div class="img">
+                        <img src="{% static 'images/bootstrap.png' %}" class="skill-icon" alt="Bootstrap">
+                    </div>
+                    <h3>Bootstrap</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section Design -->
+    <section class="contact" id="contact">
+        <h2 class="heading">Contact <span>Me</span></h2>
+        <form action="{% url 'contact_submit' %}" method="POST">
+            {% csrf_token %}
+            <div class="input-box">
+                <input type="text" name="name" required placeholder="Your Name">
+                <input type="email" name="email" required placeholder="Email">
+            </div>
+            <div class="input-box">
+                <input type="number" name="phone" required placeholder="Mobile No.">
+                <input type="text" name="subject" required placeholder="Email Subject">
+            </div>
+            <textarea name="message" cols="30" rows="10" required placeholder="Your Message"></textarea>
+            <input type="submit" value="Send Message" class="btn">
+        </form>
+    </section>
+
+    <!-- Footer Section Design -->
+    <footer class="footer">
+        <div class="social-media">
+            <a href="https://linkedin.com/in/shubham-gawande"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="https://github.com/shubham-gawande"><i class="fa-brands fa-github"></i></a>
+            <a href="mailto:shubham.gawande@example.com"><i class="fa-solid fa-envelope"></i></a>
+        </div>
+        <div class="footer-text">
+            <p>Copyright © 2023 | Shubham Gawande</p>
+        </div>
+        <div class="footer-iconTop">
+            <a href="#home"><i class="fa-solid fa-angle-up"></i></a>
+        </div>
+    </footer>
+
+    <!-- Scroll Reveal -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!-- Typed.js -->
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+    <!-- MAIN JS -->
+    <script src="{% static 'js/main.js' %}"></script>
+</body>
+</html>
